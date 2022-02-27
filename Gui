@@ -1,0 +1,29 @@
+local Mana = loadstring(game:HttpGet("https://pastebin.com/raw/inP2PXxe%22))()
+
+local Win = Mana:Window("NEVERLOSE") -- Creates the Window AKA Adds the ScreenGui to CoreGui lol
+
+local MainStuff = Mana:SName("MainStuff") -- Creates a littel information mark in the top left looks cool ngl try it
+
+local Autofarm = Win:Tab("AutoFarm") -- This Creates a Tab on the left Side
+
+Autofarm:Toggle("Example Toggle", false, function(t) -- This is A Toggle
+hi = t
+   while hi do task.wait()
+      print("Running Loop")
+   end
+end)
+
+Autofarm:Button("Example Button", function() -- This is A Button
+print("hello ".. game.Players.LocalPlayer.Name.. "!")
+end)
+
+Autofarm:Slider("Walk Speed", 1, 500, 16, function(v) -- 1st is String | 2nd is min | 3rd is max | 4th is start whew
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+
+Autofarm:Label("Hello") -- This is just for information or Text ;)
+
+Autofarm:line() -- This Creates a line aka some space for a new section or something like that :P
+
+
+print("Enjoy!")
